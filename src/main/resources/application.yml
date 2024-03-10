@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/ArthurCorbellini/sbdb-private.git"
+          username: the_username
+          password: the_access_token
+          default-label: main
+          timeout: 5 
+          clone-on-start: true
+          force-pull: true
+          search-paths:
+          - "/cfg"
