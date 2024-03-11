@@ -19,3 +19,19 @@ spring:
           force-pull: true
           search-paths:
           - "/cfg"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+# Whenever the Github repo send a webhook request to the monitor API, the configserver is going to use the Spring Cloud Bus;
+#  -> Behind the scenes, it is going to invoke the bus refresh API path "/actuator/busrefresh" and reload the env variable;
+#  -> Also need to create a Webhook in the private Github repo, and the webhook will send a request to the monitor API endpoint;
+#     -> This only works in production scenarios, with a available domain;
+#     -> Or using tools like Hookdeck, to redirect the request to the localhost.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
