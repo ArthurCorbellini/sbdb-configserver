@@ -10,10 +10,10 @@
   </parent>
 
   <groupId>com.artcorb</groupId>
-  <artifactId>configserver</artifactId>
+  <artifactId>sbdb-configserver</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>configserver</name>
+  <name>sbdb-configserver</name>
   <description>Microservices config server</description>
 
   <properties>
