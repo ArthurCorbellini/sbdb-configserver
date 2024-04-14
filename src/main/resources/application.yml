@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8071
 
 spring:
   application:
@@ -35,7 +35,7 @@ management:
     web:
       exposure:
         include: "*"
-  health: # libera os endpoints para readness e liveness que serão usados para verificar se o configserver está operante (...8888/actuator/health)
+  health: # libera os endpoints para readness e liveness que serão usados para verificar se o configserver está operante (...8071/actuator/health)
     readinessstate:
       enabled: true
     livenessstate:
